@@ -30,6 +30,9 @@ git add [filnamn]
 // "Add" en borttagen fil till staged
 git rm [filnamn]
 
+// Änfra en commit
+git commit --amend
+
 // Visa tidigar commits
 git log
 
@@ -98,3 +101,4 @@ f563754 - demonstrate breakage of detached checkout wi
 d1a43f2 - reset --hard/read-tree --reset -u: remove un
 51a94af - Fix "checkout --track -b newbranch" on detac
 b0ad11e - pull: allow "git pull origin $something:$cur
+
