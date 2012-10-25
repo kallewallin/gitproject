@@ -30,8 +30,11 @@ git add [filnamn]
 // "Add" en borttagen fil till staged
 git rm [filnamn]
 
-// Änfra en commit
+// Ändra en commit
 git commit --amend
+
+// Ta ut en fil från staged
+git reset HEAD [filnamn]
 
 // Visa tidigar commits
 git log
