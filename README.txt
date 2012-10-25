@@ -20,3 +20,6 @@ git commit
 
 // Commit with editor and diff included
 git commit -v
+
+// Commit without needing to add files
+git commit -a -m "Commit message"
