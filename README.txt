@@ -36,6 +36,9 @@ git commit --amend
 // Ta ut en fil från staged
 git reset HEAD [filnamn]
 
+// Dra tillbaka ändringar gjorda till en fil
+git checkout -- [filnamn]
+
 // Visa tidigar commits
 git log
 
