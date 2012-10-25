@@ -23,3 +23,6 @@ git commit -v
 
 // Commit without needing to add files
 git commit -a -m "Commit message"
+
+// "Add" en borttagen fil till staged
+git rm [filnamn]
