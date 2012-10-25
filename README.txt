@@ -24,5 +24,8 @@ git commit -v
 // Commit without needing to add files
 git commit -a -m "Commit message"
 
+// "Add" en fil till staged (Skall göras på båda tillagda och ändrade filer)
+git add [filnamn]
+
 // "Add" en borttagen fil till staged
 git rm [filnamn]
