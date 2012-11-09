@@ -108,3 +108,27 @@ d1a43f2 - reset --hard/read-tree --reset -u: remove un
 51a94af - Fix "checkout --track -b newbranch" on detac
 b0ad11e - pull: allow "git pull origin $something:$cur
 
+// Push ett skapat lokalt git repo till ett remote repo address ex: git@github.com:kallewallin/gitproject.git
+git remote add origin [address]
+git push -u origin master
+
+// Lista remote repository
+git remote
+
+// Lista remote repository och address
+git remote -v
+
+// Hämta data från repo utan merge
+git fetch [remote name] [branch name] 
+
+// Hämta data från repo med merge
+git pull [remote name] [branch name] 
+
+// Hämta info om remote
+git remote show [remote name] 
+
+// Visa repo taggar
+git tag
+
+// Sök på repo taggar
+git tag -l 'v1.4.2.*'
