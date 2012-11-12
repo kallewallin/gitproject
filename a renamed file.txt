@@ -5,6 +5,3 @@ ny ändring
 ja
 
 t1 + detta
-t2rebase
-
-t2 ändring nr 1
