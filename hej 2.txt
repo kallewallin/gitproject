@@ -7,3 +7,5 @@ ok
 t1
 
 STABIL ANDRING!!!
+
+T1!!!
