@@ -6,5 +6,3 @@ Gör en liten ändring i ticket 1
 snabb ändring
 
 t2
-
-t2 andring nr 2
