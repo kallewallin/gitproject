@@ -100,6 +100,9 @@ cherry-pick to production (FÖRSIKTIG: bör bara göras med "self contained" ticket
 > cd temp
 > git checkout [version]
 > git cherry-pick [part of commit hash]
+...fixa konfliker...
+> git add [filer]
+> git commit -m "Merge meddelande eller cherry pick meddelande"
 > git push origin [version]
 delete temp
 
