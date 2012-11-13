@@ -69,7 +69,7 @@ Pull merge (flera utvecklare)
 > git pull origin master
 ...fixa konfliker...
 > git add [filer]
-> git commit -m "Merge meddelande" ???
+> git commit -m "Merge meddelande"
 > git push origin master
 
 Ticket merge (flera tickets)
@@ -78,12 +78,12 @@ Ticket merge (flera tickets)
 > git merge [ticket 1]
 ...fixa konfliker...
 > git add [filer]
-> git commit -m "Merge meddelande" ???
+> git commit -m "Merge meddelande"
 > git push origin master
 > git merge [ticket 2]
 ...fixa konfliker...
 > git add [filer]
-> git commit -m "Merge meddelande" ???
+> git commit -m "Merge meddelande"
 > git push origin master
 
 Hotfix production
@@ -96,12 +96,24 @@ Hotfix production
 
 cherry-pick to production (FÖRSIKTIG: bör bara göras med "self contained" tickets)
 -------------------------
-> git pull --all
+> git clone [project] temp
+> cd temp
+> git checkout [version]
 > git cherry-pick [part of commit hash]
+...fixa konfliker...
+> git add [filer]
+> git commit -m "Merge meddelande eller cherry pick meddelande" (om det inte blir konflikt så får man "by default" samma meddelande som den ticket man plockar)
 > git push origin [version]
+delete temp
 
 merge development med production
 --------------------------------
-
-
-
+> git clone [project] temp
+> cd temp
+> git checkout [version]
+> git merge master
+...fixa konfliker...
+> git add [filer]
+> git commit -m "Merge meddelande"
+> git push origin [version]
+delete temp
