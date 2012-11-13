@@ -96,9 +96,12 @@ Hotfix production
 
 cherry-pick to production (FÖRSIKTIG: bör bara göras med "self contained" tickets)
 -------------------------
-> git pull origin [version]
+> git pull --all
 > git cherry-pick [part of commit hash]
-> 
+> git push origin [version]
+
+merge development med production
+--------------------------------
 
 
 
