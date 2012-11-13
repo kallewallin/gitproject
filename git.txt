@@ -1,0 +1,104 @@
+Remote Struktur
+---------------
+En remote branch per version. Varje versions branch är "production" och man skall aldrig utföra annat än "hot fix" mot dessa.
+
+Remote master är development repo. All utveckling i senaste versionen skall göras mot remote master.
+
+Local struktur
+--------------
+En master branch som aldrig utvecklas i. Denna skall bara användas för pull/push mote remote master(development repo).
+
+Skapa alltid en ny branch för en ny ticket. När ticketen är klar så skall man köra en merge mot local master och sedan push mot remote master
+
+Flöden
+------
+
+Ticket: 
+-------
+> git branch [ticket id]
+> git checkout [ticket id]
+...ticket...
+> git add [filer]
+> git commit -m "Closes [ticket id]"
+> git checkout master
+> git pull origin master
+> git merge [ticket id]
+> git push origin master
+> git branch -d [ticket id]
+
+Ticket+hotfix:
+--------------
+> git branch [ticket id]
+> git checkout [ticket id]
+...ticket...
+> git stash
+> git branch [hotfix ticket id]
+> git checkout [hotfix ticket id]
+...hotfix ticket...
+> git add [filer]
+> git commit -m "Closes [hotfix ticket id]"
+> git checkout master
+> git pull origin master
+> git merge [hotfix ticket id]
+> git push origin master
+> git branch -d [hotfix ticket id]
+> git checkout [ticket id]
+> git stash pop
+...ticket...
+> git add [filer]
+> git commit -m "Closes [ticket id]"
+> git checkout master
+> git pull origin master
+> git merge [ticket id]
+> git push origin master
+> git branch -d [ticket id]
+
+Ticket avbruten
+---------------
+> git branch [ticket id]
+> git checkout [ticket id]
+...ticket...
+> git stash save "Meddelande som beskriver varför ticket blev avbruten"
+> git checkout master
+> git branch -d [ticket id]
+Starta ny ticket...
+
+Pull merge (flera utvecklare)
+-------------------------------
+[Ticket]
+> git pull origin master
+...fixa konfliker...
+> git add [filer]
+> git commit -m "Merge meddelande" ???
+> git push origin master
+
+Ticket merge (flera tickets)
+---------------------------
+> git pull origin master
+> git merge [ticket 1]
+...fixa konfliker...
+> git add [filer]
+> git commit -m "Merge meddelande" ???
+> git push origin master
+> git merge [ticket 2]
+...fixa konfliker...
+> git add [filer]
+> git commit -m "Merge meddelande" ???
+> git push origin master
+
+Hotfix production
+-----------------
+> git pull origin [version]
+...hotfix ticket...
+> git add [filer]
+> git commit -m "Closes [hotfix ticket id]"
+> git push origin [version]
+
+cherry-pick to production (FÖRSIKTIG: bör bara göras med "self contained" tickets)
+-------------------------
+> git pull origin [version]
+> git cherry-pick [part of commit hash]
+> 
+
+
+
