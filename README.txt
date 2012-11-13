@@ -132,3 +132,5 @@ git tag
 
 // Sök på repo taggar
 git tag -l 'v1.4.2.*'
+
+Cherry pick test i 1.0
